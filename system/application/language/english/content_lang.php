@@ -70,4 +70,7 @@ $lang['req_start'] = "Request start VPS with Context ";
 $lang['power_header'] = "This is an part of Uvpanel that can help you to restart or stop your VPS";
 $lang['system_header'] = "This page will help you to manage several aspect of your system like change VPS password";
 $lang['system_changepass'] = "Change VPS Password";
+$lang['system_changepass_success'] = "Your vps password has been changed to";
+$lang['system_changemem'] = "Upgrade VPS Memory";
+$lang['system_changemem_success'] = "Your Request has been added to order list";
 ?>

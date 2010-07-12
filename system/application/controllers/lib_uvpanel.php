@@ -83,7 +83,15 @@ class Lib_uvpanel extends Controller {
 	$context =  get_cookie('context');
 	$pass = $this->input->post('password');
 	$this->gui_uvpanel->change_vps_pass($pass,$context);
-	redirect("uvpanel/vps/$context");
+	$mess = $this->lang->line('system_changepass_success');
+	echo "$mess $pass";
+	}
+	
+	function change_vps_mem(){
+	$context =  get_cookie('context');
+	$mem = $this->input->post('mem');
+	$mess = $this->lang->line('system_changemem_success');
+	echo  $mess;
 	}
 	
 	function del_mess($name){

@@ -11,6 +11,7 @@
 <meta name="Robots" content="index,follow" />
         <script type="text/javascript" src="<?php echo base_url();?>/images/js/jquery.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>/images/js/jquery.validate.js"></script>
+         <script type="text/javascript" src="<?php echo base_url();?>/images/js/jquery.form.js"></script>
         
 		<script type="text/javascript" src="<?php echo base_url(); ?>/images/js/jquery.progressbar.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>/images/js/facebox.js" ></script> 
