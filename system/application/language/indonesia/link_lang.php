@@ -1,0 +1,29 @@
+<?php
+$lang['home'] = "Beranda";
+$lang['site'] = "Panel Pengguna Vmin";
+$lang['slogan'] = "Manajemen Vserver tidak pernah semudah ini";
+$lang['create'] = "Buat VPS";
+$lang['reg'] = "VPS Terdatar";
+$lang['support'] = "Dukungan";
+$lang['about'] = "Tentang Saya";
+$lang['exit'] = "Keluar";
+$lang['template_server'] = "Contoh Server";
+$lang['power'] = "Pengaturan Daya";
+$lang['system'] = "Pengaturan System";
+$lang['template'] = "Template oleh";
+$lang['created'] = "Dibuat oleh";
+$lang['side_sys'] = "Info Sistem";
+$lang['side_mem'] = "Memori";
+$lang['side_mem_total'] = "Total";
+$lang['side_mem_usage'] = "Terpakai";
+$lang['side_mem_free'] = "Bebas";
+$lang['side_vs_name'] = "Nama VPS";
+$lang['side_vs_total'] = "Kapasitas Total";
+$lang['side_vs_free'] = "Ruang Bebas";
+$lang['side_vs_rem'] = "Sisa VPS";
+$lang['side_proc'] = "Aplikasi Berjalan";
+$lang['side_proc_total'] = "Total Berjalan";
+$lang['side_cpu_load'] = "Beban CPU";
+$lang['side_proc_most'] = "Proces terberat";
+$lang['link_blog'] = "Blog Pengembang";
+?>
