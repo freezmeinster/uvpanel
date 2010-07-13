@@ -82,7 +82,7 @@ class Lib_uvpanel extends Controller {
 	function change_vps_pass(){
 	$context =  get_cookie('context');
 	$pass = $this->input->post('password');
-	$this->gui_uvpanel->change_vps_pass($pass,$context);
+        $this->gui_uvpanel->change_vps_pass($pass,$context);
 	$mess = $this->lang->line('system_changepass_success');
 	echo "$mess $pass";
 	}

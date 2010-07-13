@@ -4,7 +4,8 @@ $.validator.setDefaults({
        	  $('#changepass').ajaxForm({ 
           target: '#done', 
           success: function() { 
-            $('#done').fadeIn('slow');
+            $('#done').fadeIn(2000);
+            $('#done').fadeOut(5000); 
         } 
     }); 
    }

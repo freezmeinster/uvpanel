@@ -195,8 +195,9 @@ class Gui_uvpanel extends Model {
          curl_setopt($ch, CURLOPT_URL, "$target/index.php/remote_vmin/change_vps_pass");
          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
          curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-         curl_exec($ch);
+         $a = curl_exec($ch);
          curl_close($ch);
+         return $a;
         }
         
         
