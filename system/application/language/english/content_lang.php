@@ -40,6 +40,7 @@ You are not allowed to enter an illegal content, smelling of sex and race, relig
 You are fully responsible for the password that you have. You are not allowed to Share your acount.
 ";
 $lang['template_header'] = "Template for VPS";
+$lang['template_content'] = "You can install a server template for your VPS , like http server , database server or samba server";
 $lang['home_header'] = "Available VPS in Vmin";
 $lang['run_run'] = "Running VPS";
 $lang['run_ava'] = "Registerd VPS";
@@ -67,10 +68,17 @@ $lang['date'] = "Date";
 $lang['del_mess'] = "Delete All Message";
 $lang['del_warning'] = "Are You sure to delete all message ?";
 $lang['req_start'] = "Request start VPS with Context ";
-$lang['power_header'] = "This is an part of Uvpanel that can help you to restart or stop your VPS";
+$lang['power_header'] = "This is an part of Uvpanel that can help you to restart or shutdown your VPS";
 $lang['system_header'] = "This page will help you to manage several aspect of your system like change VPS password";
 $lang['system_changepass'] = "Change VPS Password";
 $lang['system_changepass_success'] = "Your vps password has been changed to";
 $lang['system_changemem'] = "Upgrade VPS Memory";
 $lang['system_changemem_success'] = "Your Request has been added to order list";
+$lang['system_changemem_error'] = "You have inputed same memory value with old memory";
+$lang['system_shutdown'] = "Shutdown";
+$lang['system_shutdown_message'] = "Are you sure to Shutdown this VPS ?";
+$lang['system_shutdown_proc'] = "System Shutdown this VPS Now";
+$lang['system_restart'] = "Restart";
+$lang['system_restart_message'] = "Are you sure to Restart this VPS ?";
+$lang['system_restart_proc'] = "System Restart this VPS Now";
 ?>

@@ -28,7 +28,7 @@ class Uvpanel extends Controller {
 		$this->load->view('sidebar');
 		$this->load->view('about');
 		$this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	function support()
 	{  
@@ -41,7 +41,7 @@ class Uvpanel extends Controller {
 		$this->load->view('sidebar');
 		$this->load->view('support');
 		$this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	
 	function power()
@@ -55,7 +55,7 @@ class Uvpanel extends Controller {
 		$this->load->view('sidebar');
 		$this->load->view('power');
 		$this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	
 	function template()
@@ -69,7 +69,7 @@ class Uvpanel extends Controller {
 		$this->load->view('sidebar');
 		$this->load->view('template');
 		$this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	
 	function system()
@@ -83,7 +83,7 @@ class Uvpanel extends Controller {
 		$this->load->view('sidebar');
 		$this->load->view('system');
 		$this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	
 	
@@ -118,7 +118,7 @@ class Uvpanel extends Controller {
 	 $this->load->view('sidebar');
 	 $this->load->view('vps_home');
 	 $this->load->view('footer');
-		}
+		}else redirect('uvpanel/home');
 	}
 	
 	function home()

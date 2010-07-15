@@ -79,6 +79,22 @@ class Lib_uvpanel extends Controller {
 	echo "</form></p></div>";
 	}
 	
+	function req_shutdown($name){
+	echo $this->lang->line('system_shutdown_proc');
+	$this->gui_uvpanel->send_vps_shutdown($name);
+	}
+	
+	function req_template($name){
+	$server = $this->input->post('server');
+	$a = $this->gui_uvpanel->send_vps_template($name,$server);
+	echo $a;
+	}
+	
+	function req_restart($name){
+	echo $this->lang->line('system_restart_proc');
+	$this->gui_uvpanel->send_vps_restart($name);
+	}
+	
 	function change_vps_pass(){
 	$context =  get_cookie('context');
 	$pass = $this->input->post('password');
@@ -91,7 +107,13 @@ class Lib_uvpanel extends Controller {
 	$context =  get_cookie('context');
 	$mem = $this->input->post('mem');
 	$mess = $this->lang->line('system_changemem_success');
-	echo  $mess;
+	$error = $this->lang->line('system_changemem_error');
+	$hah = $this->gui_uvpanel->change_vps_mem($mem,$context);
+	if ($hah =="1"){
+	echo $mess; 
+	}else if ($hah == "0"){
+	echo $error;
+	}
 	}
 	
 	function del_mess($name){

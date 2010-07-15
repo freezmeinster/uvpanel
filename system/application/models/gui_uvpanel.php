@@ -167,6 +167,36 @@ class Gui_uvpanel extends Model {
          curl_close($ch);
         }
         
+        function send_vps_restart($name){
+         $target = $this->config->item('vmin_path');
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, "$target/index.php/remote_vmin/restart_vps/$name");
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         $a = curl_exec($ch);
+         curl_close($ch);
+        }
+        
+         function send_vps_template($name,$server){
+         $data = array('server' => $server);
+         $target = $this->config->item('vmin_path');
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, "$target/index.php/remote_vmin/template_vps/$name");
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         $a = curl_exec($ch);
+         curl_close($ch);
+         return $a;
+        }
+        
+        function send_vps_shutdown($name){
+         $target = $this->config->item('vmin_path');
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, "$target/index.php/remote_vmin/shutdown_vps/$name");
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         $a = curl_exec($ch);
+         curl_close($ch);
+        }
+        
         function send_remote_message($user,$mess){
          $data = array('message' => $mess);
          $target = $this->config->item('vmin_path');
@@ -199,7 +229,17 @@ class Gui_uvpanel extends Model {
          curl_close($ch);
          return $a;
         }
-        
+        function change_vps_mem($mem,$context){
+         $data = array('mem' => $mem,'context' => $context);
+         $target = $this->config->item('vmin_path');
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_URL, "$target/index.php/remote_vmin/change_vps_mem");
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+         $a = curl_exec($ch);
+         curl_close($ch);
+         return $a;
+        }
         
         function resolv_context($con){
              $data = shell_exec("sudo /usr/local/sbin/vserver-stat | grep $con | awk '{ print $8}'");
